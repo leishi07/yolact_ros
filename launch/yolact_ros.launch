@@ -1,0 +1,24 @@
+<launch>
+
+  <arg name="sub_img_topic_name"          default="/camera/color/image_raw"/>
+  <arg name="model_path"                  default="$(find yolact_ros)/src/yolact/weights/yolact_darknet53_54_800000.pth"/>
+  <arg name="cuda"                        default="True"/>
+  <arg name="yolact_config"               default="yolact_darknet53_config"/>
+  <arg name="use_fast_nms"                default="True"/>
+  <arg name="threshold"                   default="0.3"/>
+  <arg name="display_cv"                  default="True"/>
+  <arg name="top_k"                  	  default="5"/>
+
+  <node pkg="yolact_ros" name="yolact_ros_node" type="yolact_ros_node.py" output="screen">
+    <param name="sub_img_topic_name"      value="$(arg sub_img_topic_name)"/>
+    <param name="model_path"              value="$(arg model_path)"/>  
+    <param name="cuda"                    value="$(arg cuda)"/>   
+    <param name="yolact_config"           value="$(arg yolact_config)"/>   
+    <param name="use_fast_nms"            value="$(arg use_fast_nms)"/>                                               
+    <param name="threshold"               value="$(arg threshold)"/>  
+    <param name="display_cv"              value="$(arg display_cv)"/>
+    <param name="top_k"                   value="$(arg top_k)"/>                                                        
+                                      
+  </node>
+
+</launch>
