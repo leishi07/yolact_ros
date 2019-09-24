@@ -6,8 +6,7 @@ This is a ROS package interfacing real-time object detector YOLACT (https://gith
 # Compatability
 Tested on Ubuntu 16.04 + ROS Kinetic + Python 3.5\
 To use cv_bridge with Python 3 in ROS Kinetic, build cv_bridge from source in a catkin workspace, remember to set python library to Python 3.
-# Citaiton
-If you use yolact_ros in your work, please cite\
+# Citation
 ```
 @misc{leiYolactROS2019,
   title = {{ROS} Interface for Real-Time Object Detector {YOLACT}}, 
